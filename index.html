@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstralKings Client - Download</title>
+    <style>
+        :root {
+            --bg-color: #0b071a;
+            --card-bg: #140e28;
+            --text-main: #ffffff;
+            --text-muted: #8b85a3;
+            --purple-accent: #9d4edd;
+            --blue-accent: #00b4d8;
+            --pink-accent: #ff477e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 1.2fr 1fr;
+            }
+            .welcome-card {
+                grid-column: span 2;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .welcome-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icon-wrapper {
+            background-color: rgba(157, 78, 221, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-wrapper svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--purple-accent);
+        }
+
+        .welcome-card h1 {
+            margin: 0 0 5px 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .welcome-card p {
+            margin: 0;
+            color: var(--purple-accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .text-blue { color: var(--blue-accent); }
+        .text-pink { color: var(--pink-accent); }
+
+        .description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .feature-list {
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-icon {
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 2px;
+            font-size: 0.95rem;
+        }
+
+        .feature-desc {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .download-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .version-info {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .version-info strong {
+            color: var(--text-main);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--purple-accent), #7b2cbf);
+            color: white;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: opacity 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3);
+        }
+
+        .btn-download:hover {
+            opacity: 0.9;
+        }
+
+        .btn-download:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Tarjeta de Bienvenida Superior -->
+        <div class="card welcome-card">
+            <div class="icon-wrapper">
+                <!-- Icono de casa simplificado estilo UI -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+            </div>
+            <div>
+                <h1>Welcome</h1>
+                <p>Enhanced Minecraft Bedrock Experience</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta Informativa Izquierda -->
+        <div class="card">
+            <h2 class="text-blue">What's this?</h2>
+            <p class="description">
+                AstralKings Client is a Minecraft Bedrock client that utilizes a MITM approach, 
+                providing various utilities to enhance the gameplay experience without modifying 
+                the game's memory, and its for AstralKings!
+            </p>
+        </div>
+
+        <!-- Tarjeta de Descarga Derecha -->
+        <div class="card download-section">
+            <div>
+                <h2>Minecraft</h2>
+                <div class="version-info">
+                    Recommended version: <strong>v1.21.130</strong>
+                </div>
+                
+                <div class="text-pink" style="font-weight: 600; font-size: 0.85rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">
+                    Game Features
+                </div>
+
+                <div class="feature-list">
+                    <!-- Característica 1 -->
+                    <div class="feature-item">
+                        <div class="feature-icon" style="color: var(--blue-accent);">🛡️</div>
+                        <div>
+                            <div class="feature-title">Enhanced Security</div>
+                            <p class="feature-desc">MITM-based packet interception</p>
+                        </div>
+                    </div>
+                    <!-- Característica 2 -->
+                    <div class="feature-item">
+                        <div class="feature-icon" style="color: var(--blue-accent);">📈</div>
+                        <div>
+                            <div class="feature-title">Performance Boost</div>
+                            <p class="feature-desc">Optimized network handling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de Descarga Vinculado a app.apk -->
+            <div style="margin-top: 30px;">
+                <a href="app.apk" class="btn-download" download>
+                    <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24">
+                        <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+                    </svg>
+                    Download APK
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
